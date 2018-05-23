@@ -1,0 +1,33 @@
+@mixin block {
+
+    border:3px solid black;
+    border-radius: 40%;
+    height:300px;
+    width: 300px;
+    background-size: cover;
+    box-shadow: black;
+}
+
+@mixin subHeadin{
+    margin-top: 24%;
+    margin-left: 16%;
+    font-size: 69px;
+    color: $primaryColor;
+    opacity: 0.7;
+       
+}
+
+@mixin image{
+
+    width:50%;
+    height:50%;
+
+}
+
+@mixin text{
+    
+    width:100%;
+    grid-column: 3 / 4 ;
+    word-wrap: break-word;
+     
+}
