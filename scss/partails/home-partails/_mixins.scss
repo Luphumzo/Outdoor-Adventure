@@ -18,16 +18,8 @@
 }
 
 @mixin image{
-
     width:50%;
     height:50%;
+    position: relative;
 
-}
-
-@mixin text{
-    
-    width:100%;
-    grid-column: 3 / 4 ;
-    word-wrap: break-word;
-     
 }
