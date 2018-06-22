@@ -408,8 +408,7 @@ body {
   .grid-containerGallery {
     display: grid;
     grid-template-columns: repeat(8, 1fr);
-    grid-template-rows: auto;
-    background-color: green; }
+    grid-template-rows: auto; }
     .grid-containerGallery .images {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
