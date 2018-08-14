@@ -1,0 +1,483 @@
+@import url('https://fonts.googleapis.com/css?family=Ubuntu');
+
+*{
+    padding: 0;
+    margin: 0;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    display: grid;
+    grid-template-columns: repeat(8,1fr);
+    grid-template-rows: auto;
+    font-family: 'Ubuntu', sans-serif;
+    word-spacing: 5px;
+}
+
+.mark-heading{
+    color: #E4572E;
+}
+.mark-berry{
+    color: #8A4F7D;
+}
+.header{
+    grid-column: 1 / 9;
+    grid-row: 1 / 3;
+    width:100vw;
+    height:100%;
+    text-align:center;
+  }
+  .zoominheader {
+    width:100vw;
+    height:100%;
+    text-align:center;
+    background: url("../images/photo-1518798495352-92ac911fc5fe.jpg");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position-y: 85%;
+    background-size: cover;
+    position: relative;
+    top: 0%;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -webkit-animation: zoomin 6s ease-in infinite;
+    animation: zoomin 6 s ease-in infinite;
+    transition: all .5s ease-in-out;
+
+  }
+  
+  /* The innermost element*/
+  .zoomoutheader {
+    width:400px;
+    height:200px;
+    text-align:center;
+    background: none;
+    -webkit-animation: grow 60s linear 10ms infinite;
+    animation: grow 60s linear 10ms infinite;
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    -webkit-animation: zoomout 90s ease-in infinite;
+    animation: zoomout 90s ease-in infinite;
+    transition: all .65s ease-in-out;
+  }
+  
+  /* Zoom in Keyframes */
+  @-webkit-keyframes zoomin {
+    0% {transform: scale(1);}
+    50% {transform: scale(1.02);}
+    100% {transform: scale(1);}
+  }
+ /*End of Zoom in Keyframes */
+  
+  /* Zoom out Keyframes */
+  @-webkit-keyframes zoomout {
+    0% {transform: scale(1);}
+    50% {transform: scale(0.98);}
+    100% {transform: scale(1);}
+  }
+
+  /*End of Zoom out Keyframes */
+  
+  /*Style for the text*/
+  .text{
+    color:whitesmoke;
+    font-weight:bold; 
+    position: absolute;
+    left: 5%;
+    top: 40%;
+    background-color: #0000001f;
+    text-align: center;
+  }
+
+// nav bar
+
+#nav{
+    grid-column: 1 / 9;
+    grid-row: 3 / 4;
+    background-color: whitesmoke;
+    position: sticky;
+    width: 100vw;
+    height: 7vh;
+    padding-top: 15px;
+
+    a{
+        text-decoration: none;
+        color: #052F5F;
+        padding-left: 3px;
+        line-height: 4px;
+        font-size: 19px;
+    
+    }
+}
+
+section{
+    grid-column: 1 / 9;
+    width: 100vw;
+}
+// about section
+
+#about{
+grid-column: 1 / 9;
+grid-row: 4 / 5;
+margin-top: 10px;
+background-color: transparent;  
+background-image: url("../images/avery-richardson-210724-unsplash.jpg");
+background-size: cover;
+background-position: top center;  
+background-repeat: no-repeat; 
+color: whitesmoke;
+height: 30vh;
+width: 100vw;
+
+}
+#skills{
+    background-image: url(../images/fraser-cottrell-697721-unsplash.jpg);
+    background-position: center;
+    background-size: cover;
+    background-position-y: 69%;
+}
+
+.skills-images{
+
+    .images{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(7,1fr);
+        img{
+            width: 100%;
+        }
+    }
+}
+.projects-images{
+
+    .images{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3,1fr);
+        img{
+            width: 80%;
+            transition: width 2s;
+            &:hover{
+                width: 35%;
+            }
+        }
+        
+    }
+}
+#contact{
+    background-image: url(../images/android-wallpaper-artistic-asphalt-799443.jpg);
+    background-position: bottom;
+    background-position-y: 55%;
+    background-size: cover;
+    height: 50vh;
+    color: whitesmoke;
+}
+footer{
+    display: inline-block;
+}
+#back-to-top_Btn{
+    padding: 0.5%;
+    display: none;
+    position: fixed;
+    bottom:5%;
+    right:0%;
+    z-index: 99;
+    font-size: 25px;
+    border: none;
+    outline: none;
+     background-color:#052F5F;
+    color: whitesmoke;
+    cursor: pointer;
+    border-radius: 3%; 
+    width: 10%;
+    height: 7%;
+    animation-name: flash;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation: flash 1500ms infinite;
+    transition: width 2s;
+  
+    &:hover{
+      background-color: #052f5f78;
+      width: 11%;
+    }
+  
+    .arrow{
+   width: 100%;
+   height: 100%;
+    }
+  }
+  
+  @keyframes flash {
+    0% { background-color: #052F5F; box-shadow: 0 0 3px #005377; }
+    50% { background-color: #052F5F; box-shadow: 0 0 40px #005377; }
+    100% { background-color: #052F5F; box-shadow: 0 0 3px #005377; }
+  }
+
+// media queries
+
+//////////////////// tablet view /////////////
+@media only screen and (min-width: 768px){
+
+    .header{
+        height:75vh;
+      }
+      #nav{
+        height: 14vh;
+        a{
+            text-decoration: none;
+            padding-left: 61px;
+            line-height: 52px;
+            font-size: 26px;
+        
+        }
+    }
+
+    /*Style for the text*/
+  .text{
+    color: whitesmoke;
+    font-weight: bold;
+    position: absolute;
+    left: 6%;
+    top: 93%;
+    background-color: #00000063;
+    text-align: center;
+  }
+
+  #about{
+      height: 40vh;
+    h1{
+        position: relative;;
+        width: 40%;
+        word-break: break-all;
+        top: 47px;
+        right:30%;
+    }
+}
+  .about-text{
+      position: relative;
+      width: 40%;
+      word-break: break-all;
+      left: 35%;
+      top: 24px;
+  
+  }
+  #education{
+      padding: 30px;
+    h1{
+        position: relative;;
+        width: 40%;
+        word-break: break-all;
+        top: 23px;
+        right:30%;
+    }
+}
+  .eduction-text{
+      position: relative;
+      width: 40%;
+      word-break: break-all;
+      left: 35%;
+    //   top: 6px;
+  }
+  #skills{
+    height: 55vh;
+    padding: 30px;
+    color: whitesmoke;
+    h1{
+        position: relative;;
+        width: 40%;
+        word-break: break-all;
+        top: 23px;
+        right:30%;
+    }
+}
+  .skills-text{
+      position: relative;
+      width: 40%;
+      word-break: break-all;
+      left: 35%;
+  }
+  
+  .skills-images{
+    padding: 50px;
+    .images{
+    color: black;        
+        display: grid;
+        grid-template-rows: 1fr;
+        grid-template-columns: repeat(7,1fr);
+        padding-left: 55px;
+        margin-top: 50px;
+        img{
+            width: 100%;
+        }
+    }
+}
+#projects{
+    padding: 30px;
+    h1{
+        position: relative;;
+        width: 40%;
+        word-break: break-all;
+        top: 23px;
+        right:30%;
+    }
+}
+  .projects-text{
+      position: relative;
+      width: 40%;
+      word-break: break-all;
+      left: 35%;
+  }
+.projects-images{
+ padding: 50px;
+    .images{
+        display: grid;
+        grid-template-rows: 1fr;
+        grid-template-columns: repeat(3,1fr);
+        padding-left: 200px;
+        img{
+            width: 80%;
+        }
+    }
+}
+#contact{
+    padding: 30px;
+    h1{
+        position: relative;;
+        width: 40%;
+        word-break: break-all;
+        top: 23px;
+        right:30%;
+    }
+}
+  .contact-text{
+      position: relative;
+      width: 40%;
+      word-break: break-all;
+      left: 40%;
+      color: white
+
+  }
+  span{
+    color: red;     
+}
+#back-to-top_Btn{
+
+    width: 5%;
+    height: 7%;
+  
+    &:hover{
+      background-color: #052f5f78;
+      width: 6%;
+    }
+
+}
+}
+
+
+
+
+
+////////////////////laptop view /////////////
+@media only screen and (min-width: 1024px){
+
+    .header{
+        height:80vh;
+        width: 100vw;
+      }
+      #nav{
+        height: 14vh;
+        a{
+            text-decoration: none;
+            padding-left: 100px;
+            line-height: 52px;
+            font-size: 49px;
+        
+        }
+    }
+        /*Style for the text*/
+  .text{
+    color: whitesmoke;
+    font-weight: bold;
+    position: absolute;
+    left: 6%;
+    top: 93%;
+    background-color: #00000063;
+    text-align: center;
+    font-size: 20px;
+  }
+#about{
+    background-position-y: 50%;
+    h1{
+        position: relative;;
+        width: 40%;
+        word-break: break-all;
+        top: 47px;
+        right:30%;
+    }
+}
+  .about-text{
+      position: relative;
+      width: 40%;
+      word-break: break-all;
+      left: 35%;
+      top: 24px;
+   
+  }
+#education{
+    h1{
+        position: relative;;
+        width: 40%;
+        word-break: break-all;
+        top: 23px;
+        right:30%;
+    }
+}
+  .eduction-text{
+      position: relative;
+      width: 40%;
+      word-break: break-all;
+      left: 35%;
+    //   top: 6px;
+  }
+#skills{
+    h1{
+        position: relative;;
+        width: 40%;
+        word-break: break-all;
+        top: 23px;
+        right:30%;
+    }
+}
+  .skills-text{
+      position: relative;
+      width: 40%;
+      word-break: break-all;
+      left: 35%;
+  }
+
+.projects-images{
+
+    .images{
+        display: grid;
+        grid-template-rows: 1fr;
+        grid-template-columns: repeat(3,1fr);
+        img{
+            width: 30%;
+        }
+    }
+}
+#back-to-top_Btn{
+
+    width: 3%;
+    height: 7%;
+  
+    &:hover{
+      background-color: #052f5f78;
+      width: 4%;
+    }
+
+}
+}
